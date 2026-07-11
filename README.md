@@ -1,103 +1,72 @@
 # 🛡️ InfraGuardian AI
 
-> An enterprise-grade AI-powered Cloud Operations, Security and Resilience Platform built on Azure, Terraform, Cloudflare and AWS.
+> **An AI-powered Cloud Operations, Security and Resilience Platform for modern enterprise workloads.**
 
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4)
 ![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4)
 ![AWS](https://img.shields.io/badge/AWS-Warm--Standby-FF9900)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-DNS%20%7C%20WAF-F38020)
 ![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF)
-![Status](https://img.shields.io/badge/Status-In%20Development-success)
 
 ---
 
 # Overview
 
-InfraGuardian AI is a long-term platform engineering project that demonstrates how to design, deploy, secure, monitor and recover an enterprise-grade multi-service application using Infrastructure as Code.
+InfraGuardian AI is an AI-powered cloud operations platform designed to monitor, secure and manage enterprise workloads across hybrid and multi-cloud environments.
 
-The project combines:
-
-- Platform Engineering
-- Cloud Engineering
-- Infrastructure as Code
-- DevSecOps
-- Zero Trust Architecture
-- Artificial Intelligence
-- Disaster Recovery
-- Kubernetes
-
-Rather than creating multiple unrelated projects, InfraGuardian AI evolves through multiple phases while remaining a single cohesive platform.
+The platform combines infrastructure provisioning, application hosting, observability, security analytics, artificial intelligence and disaster recovery into a unified operational experience. Built around Zero Trust principles and Infrastructure as Code, InfraGuardian AI demonstrates how modern cloud platforms can be deployed, operated and secured using industry best practices.
 
 ---
 
-# Objectives
+# Core Capabilities
 
-The primary goals of this project are to:
+## Infrastructure Platform
 
-- Build an enterprise Terraform module library
-- Deploy complete Azure environments using reusable Infrastructure as Code
-- Develop a modern AI-enabled multi-service application
-- Apply Zero Trust Architecture principles
-- Implement enterprise monitoring and observability
-- Perform offensive security testing using Kali Linux
-- Design and validate Disaster Recovery across Azure and AWS
-- Migrate the same application from App Service to Kubernetes
-- Demonstrate modern Platform Engineering practices
+* Automated infrastructure provisioning using Terraform
+* Modular and reusable Infrastructure as Code
+* Enterprise Azure architecture
+* Hybrid and multi-cloud deployment model
+* Cloud-native application hosting
 
 ---
 
-# Key Features
+## Zero Trust Security
 
-## Infrastructure
-
-- Azure Landing Zone
-- Hub-and-Spoke Networking
-- Private Networking
-- Managed Identities
-- Azure Key Vault
-- Azure SQL
-- Storage Accounts
-- App Service
-- Private Endpoints
-
----
-
-## Security
-
-- Microsoft Entra ID
-- Conditional Access
-- Privileged Identity Management (PIM)
-- Microsoft Defender for Cloud
-- Microsoft Sentinel
-- Cloudflare WAF
-- Zero Trust Network Design
+* Identity-first authentication
+* Microsoft Entra ID integration
+* Conditional Access
+* Privileged Identity Management (PIM)
+* Managed Identities
+* Private Endpoints
+* Role-Based Access Control (RBAC)
+* Secretless service authentication
+* Cloudflare Web Application Firewall
 
 ---
 
 ## Observability
 
-- Azure Monitor
-- Log Analytics
-- Application Insights
-- Azure Workbooks
-- Security Analytics
-- AI-generated Incident Summaries
+* Centralised logging
+* Distributed application monitoring
+* Infrastructure health monitoring
+* Performance analytics
+* Security monitoring
+* Operational dashboards
+* AI-generated operational summaries
 
 ---
 
-## AI
+## Artificial Intelligence
 
-InfraGuardian AI is not simply a chatbot.
+Artificial Intelligence enhances operational decision-making throughout the platform by:
 
-Artificial Intelligence is used to:
-
-- Explain incidents
-- Summarize logs
-- Analyse infrastructure health
-- Detect suspicious behaviour
-- Recommend remediation actions
-- Generate operational reports
-- Assist with Disaster Recovery investigations
+* Analysing infrastructure health
+* Summarising operational events
+* Explaining incidents
+* Identifying anomalous behaviour
+* Recommending remediation actions
+* Generating operational reports
+* Assisting security investigations
 
 ---
 
@@ -105,25 +74,26 @@ Artificial Intelligence is used to:
 
 Primary Environment
 
-- Microsoft Azure
+* Microsoft Azure
 
-Disaster Recovery Environment
+Recovery Environment
 
-- Amazon Web Services (Warm Standby)
+* Amazon Web Services (Warm Standby)
 
-Capabilities
+Recovery Strategy
 
-- Infrastructure recreation
-- Database recovery
-- DNS failover
-- Recovery validation
-- RTO/RPO reporting
+* Infrastructure recreation using Terraform
+* Application deployment
+* Database recovery
+* DNS failover
+* Recovery validation
+* RTO/RPO measurement and reporting
 
 ---
 
 # High-Level Architecture
 
-```
+```text
                     Users
                        │
                  Cloudflare
@@ -133,30 +103,95 @@ Capabilities
         │                             │
         │      Microsoft Azure        │
         │                             │
-        │  Frontend                   │
-        │  API Gateway                │
-        │  Authentication Service     │
-        │  Orders Service             │
+        │        Frontend             │
+        │      API Gateway            │
+        │ Authentication Service      │
+        │    Orders Service           │
         │  Inventory Service          │
-        │  Reporting Service          │
-        │  AI Service                 │
+        │   Reporting Service         │
+        │      AI Service             │
         │                             │
-        │ Azure SQL                   │
-        │ Key Vault                   │
-        │ Storage                     │
-        │ Azure Monitor               │
-        │ Sentinel                    │
+        │      Azure SQL              │
+        │      Key Vault              │
+        │       Storage               │
+        │     Azure Monitor           │
+        │ Microsoft Sentinel          │
         └──────────────┬──────────────┘
                        │
-                 Warm Standby
-                    AWS
+               Warm Standby
+               Amazon Web Services
 ```
+
+---
+
+# Technology Stack
+
+## Cloud Platforms
+
+* Microsoft Azure
+* Amazon Web Services
+* Cloudflare
+
+## Infrastructure as Code
+
+* Terraform
+
+## CI/CD
+
+* GitHub Actions
+* Azure DevOps *(planned)*
+
+## Application Platform
+
+* ASP.NET Core
+* Azure App Service
+* REST APIs
+
+## Data Platform
+
+* Azure SQL Database
+* Azure Storage
+
+## Security
+
+* Microsoft Entra ID
+* Azure Key Vault
+* Microsoft Defender for Cloud
+* Microsoft Sentinel
+
+## Artificial Intelligence
+
+* Azure OpenAI
+
+## Observability
+
+* Azure Monitor
+* Log Analytics
+* Application Insights
+
+---
+
+# Zero Trust Architecture
+
+InfraGuardian AI is designed around Microsoft's Zero Trust principles.
+
+### Verify Explicitly
+
+Every request is authenticated and authorised using identity, device and contextual information before access is granted.
+
+### Use Least Privilege
+
+Services authenticate using Managed Identities and Role-Based Access Control, eliminating long-lived credentials wherever possible.
+
+### Assume Breach
+
+Network segmentation, continuous monitoring, security analytics and incident detection are implemented throughout the platform to minimise the impact of a potential compromise.
 
 ---
 
 # Repository Structure
 
-```
+```text
 InfraGuardian-AI/
 
 ├── applications/
@@ -174,7 +209,8 @@ InfraGuardian-AI/
 │   ├── 09-Terraform-Architecture.md
 │   ├── 10-CICD.md
 │   ├── 11-Disaster-Recovery.md
-│   └── 12-Kubernetes.md
+│   ├── 12-Kubernetes.md
+│   └── 13-Roadmap.md
 │
 ├── pipelines/
 ├── scripts/
@@ -187,151 +223,74 @@ InfraGuardian-AI/
 
 ---
 
-# Technology Stack
-
-## Cloud
-
-- Microsoft Azure
-- Amazon Web Services
-- Cloudflare
-
-## Infrastructure as Code
-
-- Terraform
-
-## CI/CD
-
-- GitHub Actions
-- Azure DevOps (planned)
-
-## Application
-
-- ASP.NET Core *(planned)*
-- REST APIs
-- Azure App Service
-
-## Database
-
-- Azure SQL Database
-
-## Security
-
-- Microsoft Entra ID
-- Microsoft Defender for Cloud
-- Microsoft Sentinel
-- Azure Key Vault
-
-## AI
-
-- Azure OpenAI
-
-## Monitoring
-
-- Azure Monitor
-- Log Analytics
-- Application Insights
-
----
-
-# Zero Trust Principles
-
-InfraGuardian AI follows Microsoft's Zero Trust philosophy.
-
-✔ Verify explicitly
-
-✔ Use least privilege
-
-✔ Assume breach
-
-The implementation includes:
-
-- Identity-first authentication
-- Managed Identities
-- RBAC
-- Private Endpoints
-- Network segmentation
-- Secretless authentication
-- Continuous monitoring
-- AI-assisted security analysis
-
----
-
-# Project Roadmap
-
-## Phase 1
-
-- Terraform Module Library
-- Azure Landing Zone
-- Enterprise Networking
-
-## Phase 2
-
-- Multi-Service Application
-- Azure App Service
-- Azure SQL
-- Key Vault
-
-## Phase 3
-
-- CI/CD
-- GitHub Actions
-- Automated Deployments
-
-## Phase 4
-
-- AI Integration
-- Operational Intelligence
-- Incident Summarisation
-
-## Phase 5
-
-- Offensive Security Testing
-- Kali Linux
-- Threat Detection
-
-## Phase 6
-
-- Disaster Recovery
-- AWS Warm Standby
-- RTO/RPO Validation
-
-## Phase 7
-
-- Kubernetes Migration
-- Azure Kubernetes Service (AKS)
-
-## Phase 8
-
-- AI-assisted Platform Operations
-- Self-healing Workflows
-- Autonomous Recommendations
-
----
-
 # Documentation
 
-Detailed architecture and implementation documents can be found under the `/docs` directory.
+Comprehensive architecture and implementation documentation is provided within the `/docs` directory.
 
-Topics include:
+Documentation includes:
 
-- Business Requirements
-- Logical Architecture
-- Physical Architecture
-- Zero Trust Design
-- Networking
-- Security
-- Observability
-- Disaster Recovery
-- Kubernetes
-- Architecture Decision Records (ADRs)
+* Business Requirements
+* Logical Architecture
+* Physical Architecture
+* Zero Trust Architecture
+* Networking Design
+* Security Architecture
+* Observability Strategy
+* Terraform Architecture
+* CI/CD Architecture
+* Disaster Recovery Design
+* Kubernetes Migration Strategy
+* Architecture Decision Records (ADRs)
 
 ---
 
-# Disclaimer
+# Product Roadmap
 
-InfraGuardian AI is a personal engineering project created for educational and portfolio purposes.
+### Platform Foundation
 
-The project is designed to demonstrate enterprise architecture, cloud engineering, DevSecOps, platform engineering and AI integration using modern Microsoft Azure technologies.
+* Enterprise Terraform Module Library
+* Secure Azure Platform
+* Modular Infrastructure as Code
+
+### Application Platform
+
+* Multi-service cloud application
+* Secure identity integration
+* Private networking
+* AI service integration
+
+### Platform Engineering
+
+* Continuous Integration
+* Continuous Deployment
+* Automated environment provisioning
+
+### Artificial Intelligence
+
+* Operational analysis
+* Incident summarisation
+* Security investigation assistance
+* Infrastructure health recommendations
+
+### Security Operations
+
+* Threat detection
+* Offensive security testing
+* Security analytics
+* AI-assisted incident response
+
+### Disaster Recovery
+
+* AWS warm-standby environment
+* Automated recovery workflows
+* Recovery validation
+* RTO/RPO reporting
+
+### Kubernetes
+
+* Application migration to Azure Kubernetes Service (AKS)
+* Container-based deployment model
+* Kubernetes operational monitoring
 
 ---
 
