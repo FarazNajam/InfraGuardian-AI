@@ -3,244 +3,241 @@
 ## Project Overview
 
 **Document Version:** 1.0
-**Status:** Draft
+**Document Status:** Draft
 **Document Type:** Project Overview
 **Project:** InfraGuardian AI
 **Author:** Faraz Najam
 
 ---
 
-# 1. Introduction
+# 1. Purpose
 
-InfraGuardian AI is an AI-powered Cloud Operations and Security Platform designed to improve the visibility, security and operational resilience of modern cloud environments.
+This document provides a high-level overview of InfraGuardian AI, including its vision, purpose, scope and guiding principles.
 
-The platform consolidates infrastructure health, application monitoring, security telemetry and operational intelligence into a single interface, enabling engineering teams to detect issues, investigate incidents and make informed operational decisions.
-
-InfraGuardian AI combines cloud-native technologies, artificial intelligence and modern platform engineering practices to provide a secure and observable operational platform capable of supporting enterprise workloads.
+It establishes the business context for the platform and serves as the foundation for the detailed architecture, security and implementation documentation contained within this repository.
 
 ---
 
-# 2. Vision
+# 2. Executive Summary
 
-To provide a modern cloud operations platform that enables engineering teams to deploy, operate, monitor and secure cloud-native applications using automation, artificial intelligence and Zero Trust principles.
+InfraGuardian AI is an AI-assisted Platform Engineering Workspace designed to support the complete lifecycle of modern cloud platforms.
 
----
+Rather than focusing on a single engineering discipline, InfraGuardian AI provides a unified environment where platform engineers can design, deploy, operate, secure, monitor and continuously improve cloud infrastructure and applications.
 
-# 3. Problem Statement
+Artificial Intelligence is integrated throughout the platform to assist engineering teams with architecture design, infrastructure generation, operational analysis, security investigations, deployment validation and disaster recovery planning.
 
-Modern cloud environments generate large volumes of operational and security telemetry across multiple services.
-
-Engineering teams are often required to navigate numerous portals and monitoring tools to understand platform health, investigate incidents and determine the root cause of operational issues.
-
-This fragmented operational model increases investigation time, complicates incident response and reduces operational visibility.
-
-InfraGuardian AI addresses these challenges by consolidating infrastructure, security and operational intelligence into a unified platform that provides meaningful insights rather than raw telemetry.
+InfraGuardian AI is intended to augment engineering decision-making by combining operational telemetry, infrastructure knowledge and architectural best practices into a single engineering experience.
 
 ---
 
-# 4. Purpose
+# 3. Vision
 
-InfraGuardian AI has been designed to provide a unified operational platform capable of:
-
-* Monitoring cloud infrastructure health
-* Monitoring application health
-* Analysing operational telemetry
-* Detecting abnormal platform behaviour
-* Assisting security investigations
-* Providing AI-assisted operational analysis
-* Supporting disaster recovery operations
-* Presenting operational insights through a single interface
+To provide an intelligent engineering workspace that enables platform engineers to design, deploy and operate secure, resilient and observable cloud platforms using automation, artificial intelligence and modern engineering practices.
 
 ---
 
-# 5. Target Users
+# 4. Problem Statement
 
-The platform is intended for technical teams responsible for designing, operating and securing enterprise cloud environments.
+Modern platform engineering requires practitioners to interact with numerous independent tools throughout the software delivery lifecycle.
 
-Typical users include:
+Architecture design, infrastructure provisioning, application deployment, monitoring, security analysis, incident investigation and disaster recovery planning are frequently performed using disconnected platforms with limited contextual awareness.
 
-* Platform Engineers
-* Cloud Engineers
-* Cloud Architects
-* DevOps Engineers
-* Site Reliability Engineers (SREs)
-* Security Engineers
-* Security Operations Centre (SOC) Analysts
-* Infrastructure Engineers
+This fragmented approach increases operational complexity, slows engineering workflows and makes it difficult to maintain a consistent view of platform health, security posture and architectural compliance.
+
+InfraGuardian AI addresses these challenges by providing a unified engineering workspace capable of assisting engineers throughout the complete platform lifecycle.
 
 ---
 
-# 6. Core Capabilities
+# 5. Platform Objectives
 
-InfraGuardian AI provides capabilities across six primary domains.
+InfraGuardian AI is designed to provide the following capabilities.
 
-## Cloud Operations
+## Platform Design
 
-* Infrastructure health monitoring
-* Application health monitoring
-* Resource inventory
-* Platform status dashboards
-* Performance monitoring
-
----
-
-## Security Operations
-
-* Security event analysis
-* Threat visibility
-* Operational security dashboards
-* Cloud security posture visibility
-* Incident investigation support
-
----
-
-## Artificial Intelligence
-
-Artificial Intelligence augments platform operations by:
-
-* Summarising operational events
-* Explaining infrastructure issues
-* Identifying behavioural anomalies
-* Assisting incident investigations
-* Recommending remediation actions
-* Producing operational reports
-
----
-
-## Observability
-
-* Centralised logging
-* Metrics collection
-* Distributed tracing
-* Operational dashboards
-* Alert visualisation
-* Historical analysis
-
----
-
-## Disaster Recovery
-
-* Recovery readiness visibility
-* Disaster Recovery dashboards
-* Recovery validation
-* Operational runbooks
-* Recovery objective reporting
+* Interactive architecture design
+* Architecture validation
+* Infrastructure recommendations
+* Cost awareness
+* Design best practices
 
 ---
 
 ## Platform Engineering
 
-* Automated infrastructure deployment
-* Standardised environment provisioning
-* Continuous delivery
+* Infrastructure provisioning
 * Infrastructure lifecycle management
+* Environment standardisation
+* Deployment automation
+* Platform governance
 
 ---
 
-# 7. Design Principles
+## Cloud Operations
 
-InfraGuardian AI has been designed around the following principles.
-
-## Security by Design
-
-Security requirements are incorporated throughout the platform architecture rather than introduced after deployment.
-
----
-
-## Zero Trust
-
-Identity is the primary security boundary.
-
-Every user, service and workload is continuously authenticated and authorised before access is granted.
+* Infrastructure health monitoring
+* Application health monitoring
+* Operational dashboards
+* Incident visibility
+* Resource inventory
 
 ---
 
-## Automation First
+## Security Operations
 
-Platform provisioning, deployment and operational processes are automated wherever practical.
+* Security posture visibility
+* Threat investigation
+* Operational security dashboards
+* AI-assisted incident analysis
+* Security recommendations
 
 ---
 
-## Observability
+## Artificial Intelligence
 
-Every platform component generates operational telemetry to support monitoring, troubleshooting and performance analysis.
+Artificial Intelligence enhances platform operations by assisting engineers with:
+
+* Architecture guidance
+* Infrastructure generation
+* Operational analysis
+* Incident summarisation
+* Security investigations
+* Disaster recovery planning
+* Platform optimisation
 
 ---
 
 ## Resilience
 
-The platform is designed to support reliable operation and repeatable disaster recovery through automation and validated recovery procedures.
+* Disaster Recovery readiness
+* Recovery validation
+* Operational runbooks
+* Platform recovery analysis
+* Recovery objective reporting
 
 ---
 
-## Extensibility
+# 6. Guiding Principles
 
-Platform capabilities can evolve without significant architectural redesign.
+InfraGuardian AI has been designed around the following engineering principles.
+
+## Engineering First
+
+The platform is designed to improve engineering workflows rather than replace engineering judgement.
+
+Artificial Intelligence provides recommendations and operational assistance while maintaining human oversight for critical architectural and operational decisions.
 
 ---
 
-# 8. High-Level Capability Model
+## Security by Design
 
-| Domain                  | Primary Capability                                   |
+Security requirements are incorporated into every stage of the platform lifecycle rather than introduced after deployment.
+
+---
+
+## Zero Trust
+
+Identity serves as the primary security boundary.
+
+Every user, workload and service is continuously authenticated, authorised and validated.
+
+---
+
+## Infrastructure as Code
+
+Infrastructure is treated as software.
+
+Platform resources are provisioned through repeatable, version-controlled deployment processes.
+
+---
+
+## Automation
+
+Repetitive engineering activities should be automated wherever practical to improve consistency, reliability and operational efficiency.
+
+---
+
+## Observability
+
+Every platform component should generate sufficient telemetry to enable operational analysis, troubleshooting and continuous improvement.
+
+---
+
+## Evolutionary Architecture
+
+The platform is designed to evolve incrementally while maintaining a stable architectural foundation.
+
+---
+
+# 7. High-Level Capability Model
+
+InfraGuardian AI provides capabilities across six engineering domains.
+
+| Domain                  | Capability                                           |
 | ----------------------- | ---------------------------------------------------- |
+| Platform Design         | Architecture design, validation and planning         |
 | Platform Engineering    | Infrastructure provisioning and lifecycle management |
-| Cloud Operations        | Platform health monitoring                           |
-| Security Operations     | Threat visibility and incident support               |
-| Observability           | Monitoring, logging and operational analytics        |
-| Artificial Intelligence | Operational intelligence and decision support        |
-| Disaster Recovery       | Recovery readiness and resilience                    |
+| Cloud Operations        | Platform monitoring and operational visibility       |
+| Security Operations     | Threat visibility and security analysis              |
+| Artificial Intelligence | Engineering assistance and operational intelligence  |
+| Resilience              | Disaster Recovery planning and validation            |
 
 ---
 
-# 9. Platform Scope
+# 8. Scope
 
-The initial implementation of InfraGuardian AI includes:
+The initial implementation of InfraGuardian AI includes capabilities for:
 
-* Microsoft Azure as the primary cloud platform
-* Amazon Web Services (AWS) as the disaster recovery platform
-* Cloudflare as the internet edge
-* Multi-service cloud-native application
-* AI-assisted operational analysis
-* Zero Trust security architecture
-* Infrastructure as Code deployment platform
-* Enterprise monitoring and observability
+* Platform design assistance
+* Infrastructure deployment
+* Cloud operations
+* Security operations
+* Artificial Intelligence integration
+* Disaster Recovery
+* Platform observability
+* Continuous delivery
 
----
-
-# 10. Out of Scope
-
-The following capabilities are not included within the initial implementation.
-
-* Multi-region active-active deployment
-* Autonomous AI remediation
-* Multi-tenant SaaS architecture
-* Commercial support processes
-* Production-scale high availability across multiple Azure regions
-
-These capabilities may be considered in future platform releases.
+The implementation architecture supporting these capabilities is described within the accompanying architecture documentation.
 
 ---
 
-# 11. Related Documentation
+# 9. Future Direction
 
-This document provides the conceptual overview of the platform.
+InfraGuardian AI has been designed as an extensible engineering platform capable of supporting additional capabilities without fundamental architectural redesign.
 
-Further technical detail is provided within the accompanying architecture documentation.
+Planned areas of future development include:
 
-| Document                     | Description                                 |
-| ---------------------------- | ------------------------------------------- |
-| 02 – Business Requirements   | Functional and non-functional requirements  |
-| 03 – Logical Architecture    | Logical services and interactions           |
-| 04 – Physical Architecture   | Azure implementation architecture           |
-| 05 – Zero Trust Architecture | Identity and security model                 |
-| 06 – Network Architecture    | Connectivity and segmentation               |
-| 07 – Security Architecture   | Platform security controls                  |
-| 08 – Observability           | Monitoring, logging and telemetry           |
-| 09 – Deployment Platform     | Terraform, CI/CD and deployment model       |
-| 10 – CI/CD Architecture      | Application and infrastructure pipelines    |
-| 11 – Disaster Recovery       | Recovery architecture and operational model |
-| 12 – Kubernetes Architecture | Container platform evolution                |
-| 13 – AI Architecture         | Artificial Intelligence platform design     |
-| 14 – Roadmap                 | Planned platform evolution                  |
+* Interactive architecture modelling
+* Infrastructure generation from engineering requirements
+* AI-assisted architecture reviews
+* Cost optimisation
+* Compliance assessment
+* Offensive security validation
+* Kubernetes platform support
+* Self-healing operational workflows
+* Multi-cloud engineering capabilities
+
+---
+
+# 10. Related Documentation
+
+This document provides the conceptual overview of InfraGuardian AI.
+
+Subsequent documentation describes the logical architecture, physical implementation, security model, deployment platform and operational design in progressively greater detail.
+
+| Document                     | Description                                        |
+| ---------------------------- | -------------------------------------------------- |
+| 02 – Business Requirements   | Functional and non-functional requirements         |
+| 03 – Logical Architecture    | Logical services and interactions                  |
+| 04 – Physical Architecture   | Physical platform architecture                     |
+| 05 – Zero Trust Architecture | Identity and security architecture                 |
+| 06 – Network Architecture    | Connectivity and segmentation                      |
+| 07 – Security Architecture   | Security controls and operational security         |
+| 08 – Observability           | Monitoring, logging and telemetry                  |
+| 09 – Deployment Platform     | Infrastructure as Code and deployment architecture |
+| 10 – CI/CD Architecture      | Delivery pipelines                                 |
+| 11 – Disaster Recovery       | Recovery architecture                              |
+| 12 – Kubernetes Architecture | Container platform evolution                       |
+| 13 – AI Architecture         | AI capabilities and engineering workflows          |
+| 14 – Roadmap                 | Platform evolution and future capabilities         |
 
 ---
