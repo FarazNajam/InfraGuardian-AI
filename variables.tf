@@ -18,7 +18,6 @@ variable "vnets" {
   type = map(object({
     name = string
     address_space = list(string)
-    dns_servers = list(string)
     rg_key = string
   }))
 }
@@ -29,6 +28,14 @@ variable "nsgs" {
     rg_key = string
   }))
 }
+
+variable "nsg_associations" {
+  type = map(object({
+    subnet_key = string
+    nsg_key    = string
+  }))
+}
+
 
 variable "subnets" {
   type = map(object({
@@ -165,7 +172,6 @@ variable "app_configs" {
     local_auth_enabled         = bool
     public_network_access      = string
     purge_protection_enabled   = bool
-    soft_delete_retention_days = number
     rg_key = string
   }))
 }
