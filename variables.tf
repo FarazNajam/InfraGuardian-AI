@@ -150,18 +150,6 @@ variable "key_vaults" {
 }
 
 ########################################
-# KEY VAULT SECRETS
-########################################
-
-variable "key_vault_secrets" {
-  type = map(object({
-    name = string
-    sqlserver_key = string
-    key_vault_key = string
-  }))
-}
-
-########################################
 # APP CONFIG VARIABLES
 ########################################
 
@@ -176,46 +164,18 @@ variable "app_configs" {
   }))
 }
 
-########################################
-# VIRTUAL MACHINE VARIABLES
-########################################
-
-variable "nics" {
-  type = map(object({
-    network_interface_name = string
-    ip_configuration = object({
-      name                = string
-      subnet_key            = string
-      private_ip_address_allocation = string
-    })
-    rg_key = string
-  }))
-}
-
-variable "vms" {
-  type = map(object({
-    name = string
-    nic_key = string
-    rg_key = string
-    vm_size = string
-    computer_name = string
-    admin_username = string
-    admin_password = string
-  }))
-}
-
-variable "private_endpoints" {
-  type = map(object({
-    name = string
-    private_service_connection = object({
-      name                = string
-      is_manual_connection = bool
-    })
-    rg_key = string
-    subnet_key = string
-    resource_key = string
-  }))
-}
+#variable "private_endpoints" {
+#  type = map(object({
+#    name = string
+#    private_service_connection = object({
+#      name                = string
+#      is_manual_connection = bool
+#    })
+#    rg_key = string
+#    subnet_key = string
+#    resource_key = string
+#  }))
+#}
 
 variable "service_bus" {
   type = map(object({

@@ -91,15 +91,6 @@ module "app_config" {
   app_configs = var.app_configs
 }
 
-module "virtual_machines" {
-  source   = "../enterprise-azure-terraform-modules/modules/vms"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
-  subnet_id = module.network.subnet_id
-  vms = var.vms
-  nics = var.nics
-}
-
 resource "azurerm_private_endpoint" "key_vault_pep" {
   name                = "p-auea-infraguardian-kv-pep"
   location            = module.rg.location["infraguardian"]
