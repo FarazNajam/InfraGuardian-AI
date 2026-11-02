@@ -4,9 +4,9 @@
 
 variable "resource_groups" {
   type = map(object({
-    name = string
+    name     = string
     location = string
-    tags = map(string)
+    tags     = map(string)
   }))
 }
 
@@ -16,15 +16,15 @@ variable "resource_groups" {
 
 variable "vnets" {
   type = map(object({
-    name = string
+    name          = string
     address_space = list(string)
-    rg_key = string
+    rg_key        = string
   }))
 }
 
 variable "nsgs" {
   type = map(object({
-    name = string
+    name   = string
     rg_key = string
   }))
 }
@@ -39,10 +39,10 @@ variable "nsg_associations" {
 
 variable "subnets" {
   type = map(object({
-    name               = string
-    address_prefixes   = list(string)
-    vnet_key           = string
-    rg_key             = string
+    name             = string
+    address_prefixes = list(string)
+    vnet_key         = string
+    rg_key           = string
 
     delegation = optional(object({
       name    = string
@@ -57,16 +57,16 @@ variable "subnets" {
 variable "app_services" {
   type = map(object({
     app_service_plan_name = string
-    app_service_name  = string
-    rg_key = string
-    subnet_key = string
+    app_service_name      = string
+    rg_key                = string
+    subnet_key            = string
   }))
 }
 
 variable "app_services_vnet_integration" {
   type = map(object({
     appservice_key = string
-    subnet_key  = string
+    subnet_key     = string
   }))
 }
 
@@ -76,20 +76,25 @@ variable "app_services_vnet_integration" {
 
 variable "sqlservers" {
   type = map(object({
-    name = string
-    version = string
-    admin_login  = string
-    admin_password = string
-    rg_key = string
+    name        = string
+    version     = string
+    admin_login = string
+    rg_key      = string
   }))
 }
 
 variable "sqldatabases" {
   type = map(object({
-    name = string
-    sku_name = string
+    name       = string
+    sku_name   = string
     server_key = string
   }))
+}
+
+variable "sql_admin_password" {
+  description = "SQL administrator password"
+  type        = string
+  sensitive   = true
 }
 
 ########################################
@@ -126,10 +131,10 @@ variable "sqldatabases" {
 
 variable "storage_accounts" {
   type = map(object({
-    name = string
-    account_tier = string
+    name                     = string
+    account_tier             = string
     account_replication_type = string
-    rg_key = string
+    rg_key                   = string
   }))
 }
 
@@ -139,13 +144,13 @@ variable "storage_accounts" {
 
 variable "key_vaults" {
   type = map(object({
-    name = string
+    name                        = string
     enabled_for_disk_encryption = bool
-    soft_delete_retention_days = number
-    purge_protection_enabled = bool
-    sku_name = string
-    rbac_authorization_enabled = bool
-    rg_key = string
+    soft_delete_retention_days  = number
+    purge_protection_enabled    = bool
+    sku_name                    = string
+    rbac_authorization_enabled  = bool
+    rg_key                      = string
   }))
 }
 
@@ -155,12 +160,12 @@ variable "key_vaults" {
 
 variable "app_configs" {
   type = map(object({
-    name = string
-    sku = string
-    local_auth_enabled         = bool
-    public_network_access      = string
-    purge_protection_enabled   = bool
-    rg_key = string
+    name                     = string
+    sku                      = string
+    local_auth_enabled       = bool
+    public_network_access    = string
+    purge_protection_enabled = bool
+    rg_key                   = string
   }))
 }
 
@@ -179,8 +184,8 @@ variable "app_configs" {
 
 variable "service_bus" {
   type = map(object({
-    name = string
-    sku = string
+    name   = string
+    sku    = string
     rg_key = string
   }))
 }

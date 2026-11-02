@@ -35,14 +35,14 @@ app_services = {
     app_service_plan_name = "p-auea-infraguardian-asp"
     app_service_name      = "p-auea-infraguardian-frontend"
     rg_key                = "infraguardian"
-    subnet_key             = "frontend_infraguardian"
+    subnet_key            = "frontend_infraguardian"
   }
 
   api = {
     app_service_plan_name = "p-auea-infraguardian-asp"
     app_service_name      = "p-auea-infraguardian-api"
     rg_key                = "infraguardian"
-    subnet_key             = "api_infraguardian"
+    subnet_key            = "api_infraguardian"
   }
 }
 
@@ -125,8 +125,8 @@ subnets = {
   frontend_infraguardian = {
     name             = "p-auea-infraguardian-fe-sn"
     address_prefixes = ["10.1.0.0/24"]
-    vnet_key          = "infraguardian"
-    rg_key            = "infraguardian"
+    vnet_key         = "infraguardian"
+    rg_key           = "infraguardian"
 
     delegation = {
       name    = "webapp"
@@ -138,7 +138,7 @@ subnets = {
     name             = "p-auea-infraguardian-api-sn"
     address_prefixes = ["10.1.1.0/24"]
     vnet_key         = "infraguardian"
-    rg_key            = "infraguardian"
+    rg_key           = "infraguardian"
 
     delegation = {
       name    = "webapp"
@@ -147,10 +147,10 @@ subnets = {
   }
 
   pep_infraguardian = {
-    name = "p-auea-infraguardian-pep-sn"
+    name             = "p-auea-infraguardian-pep-sn"
     address_prefixes = ["10.1.2.0/24"]
-    vnet_key = "infraguardian"
-    rg_key = "infraguardian"
+    vnet_key         = "infraguardian"
+    rg_key           = "infraguardian"
   }
 }
 
@@ -161,10 +161,10 @@ subnets = {
 
 storage_accounts = {
   infraguardian = {
-    name                       = "paueainfraguardianst"
-    account_tier               = "Standard"
-    account_replication_type   = "LRS"
-    rg_key                     = "infraguardian"
+    name                     = "paueainfraguardianst"
+    account_tier             = "Standard"
+    account_replication_type = "LRS"
+    rg_key                   = "infraguardian"
   }
 }
 
@@ -175,13 +175,13 @@ storage_accounts = {
 
 key_vaults = {
   infraguardian = {
-    name                       = "p-auea-infraguardian-kv"
+    name                        = "p-auea-infraguardian-kv"
     enabled_for_disk_encryption = true
-    soft_delete_retention_days = 7
-    purge_protection_enabled   = false
-    sku_name                   = "standard"
-    rbac_authorization_enabled = true
-    rg_key                     = "infraguardian"
+    soft_delete_retention_days  = 7
+    purge_protection_enabled    = false
+    sku_name                    = "standard"
+    rbac_authorization_enabled  = true
+    rg_key                      = "infraguardian"
   }
 }
 
@@ -192,12 +192,12 @@ key_vaults = {
 
 app_configs = {
   infraguardian = {
-    name                    = "p-auea-infraguardian-ac"
-    sku                     = "free"
-    local_auth_enabled      = false
-    public_network_access   = "enabled"
+    name                     = "p-auea-infraguardian-ac"
+    sku                      = "free"
+    local_auth_enabled       = false
+    public_network_access    = "enabled"
     purge_protection_enabled = false
-    rg_key                  = "infraguardian"
+    rg_key                   = "infraguardian"
   }
 }
 
@@ -220,18 +220,17 @@ service_bus = {
 
 sqlservers = {
   sqlserver_infraguardian = {
-    name = "p-auea-infraguardian-sqlserver"
-    version = "12.0"
-    admin_login= "sqladmin"
-    admin_password = "ReplaceWithSecurePassword123"
-    rg_key = "infraguardian"
+    name        = "p-auea-infraguardian-sqlserver"
+    version     = "12.0"
+    admin_login = "sqladmin"
+    rg_key      = "infraguardian"
   }
 }
 
 sqldatabases = {
   sqldb_infraguardian = {
-    name = "p-auea-infraguardian-sqldb"
-    sku_name = "basic"
+    name       = "p-auea-infraguardian-sqldb"
+    sku_name   = "basic"
     server_key = "sqlserver_infraguardian"
   }
 }
