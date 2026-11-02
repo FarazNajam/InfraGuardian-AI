@@ -14,47 +14,53 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 module "rg" {
-  source   = "../enterprise-azure-terraform-modules/modules/resource_group"
+  source          = "../enterprise-azure-terraform-modules/modules/resource_group"
   resource_groups = var.resource_groups
 }
 
 module "network" {
   source   = "../enterprise-azure-terraform-modules/modules/network"
-  rg_name = module.rg.rg_name
+  rg_name  = module.rg.rg_name
   location = module.rg.location
-  vnets = var.vnets
-  subnets = var.subnets
+  vnets    = var.vnets
+  subnets  = var.subnets
 }
 
 module "nsg" {
-  source = "../enterprise-azure-terraform-modules/modules/nsg"
-  rg_name = module.rg.rg_name
-  location = module.rg.location
-  nsgs = var.nsgs
-  subnet_id = module.network.subnet_id
+  source           = "../enterprise-azure-terraform-modules/modules/nsg"
+  rg_name          = module.rg.rg_name
+  location         = module.rg.location
+  nsgs             = var.nsgs
+  subnet_id        = module.network.subnet_id
   nsg_associations = var.nsg_associations
 }
 
 module "app" {
-  source   = "../enterprise-azure-terraform-modules/modules/app_service"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
-  app_services = var.app_services
+  source                        = "../enterprise-azure-terraform-modules/modules/app_service"
+  rg_name                       = module.rg.rg_name
+  location                      = module.rg.location
+  app_services                  = var.app_services
   app_services_vnet_integration = var.app_services_vnet_integration
-  subnet_id = module.network.subnet_id
+  subnet_id                     = module.network.subnet_id
 }
 
 module "role_assignments" {
-  source   = "../enterprise-azure-terraform-modules/modules/role_assignments"
-  principal_ids  = module.app.principal_ids
-  role_assignments  = local.role_assignments
+  source           = "../enterprise-azure-terraform-modules/modules/role_assignments"
+  principal_ids    = module.app.principal_ids
+  role_assignments = local.role_assignments
 }
 
 module "db" {
   source   = "../enterprise-azure-terraform-modules/modules/database"
   rg_name  = module.rg.rg_name
   location = module.rg.location
-  sqlservers = var.sqlservers
+
+  sqlservers = {
+    for key, server in var.sqlservers : key => merge(server, {
+      admin_password = var.sql_admin_password
+    })
+  }
+
   sqldatabases = var.sqldatabases
 }
 
@@ -70,24 +76,24 @@ module "db" {
 # }
 
 module "storage_account" {
-  source   = "../enterprise-azure-terraform-modules/modules/storage_account"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
+  source           = "../enterprise-azure-terraform-modules/modules/storage_account"
+  rg_name          = module.rg.rg_name
+  location         = module.rg.location
   storage_accounts = var.storage_accounts
 }
 
 module "key_vault" {
-  source   = "../enterprise-azure-terraform-modules/modules/key_vault"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
-  tenant_id = data.azurerm_client_config.current.tenant_id
+  source     = "../enterprise-azure-terraform-modules/modules/key_vault"
+  rg_name    = module.rg.rg_name
+  location   = module.rg.location
+  tenant_id  = data.azurerm_client_config.current.tenant_id
   key_vaults = var.key_vaults
 }
 
 module "app_config" {
-  source   = "../enterprise-azure-terraform-modules/modules/app_config"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
+  source      = "../enterprise-azure-terraform-modules/modules/app_config"
+  rg_name     = module.rg.rg_name
+  location    = module.rg.location
   app_configs = var.app_configs
 }
 
@@ -95,7 +101,7 @@ resource "azurerm_private_endpoint" "key_vault_pep" {
   name                = "p-auea-infraguardian-kv-pep"
   location            = module.rg.location["infraguardian"]
   resource_group_name = module.rg.rg_name["infraguardian"]
-  subnet_id = module.network.subnet_id["pep_infraguardian"]
+  subnet_id           = module.network.subnet_id["pep_infraguardian"]
 
   private_service_connection {
     name                           = "internal"
@@ -109,7 +115,7 @@ resource "azurerm_private_endpoint" "sql_server" {
   name                = "p-auea-infraguardian-db-pep"
   location            = module.rg.location["infraguardian"]
   resource_group_name = module.rg.rg_name["infraguardian"]
-  subnet_id = module.network.subnet_id["pep_infraguardian"]
+  subnet_id           = module.network.subnet_id["pep_infraguardian"]
 
   private_service_connection {
     name                           = "internal"
@@ -120,8 +126,44 @@ resource "azurerm_private_endpoint" "sql_server" {
 }
 
 module "service_bus" {
-  source   = "../enterprise-azure-terraform-modules/modules/service_bus"
-  rg_name  = module.rg.rg_name
-  location = module.rg.location
+  source      = "../enterprise-azure-terraform-modules/modules/service_bus"
+  rg_name     = module.rg.rg_name
+  location    = module.rg.location
   service_bus = var.service_bus
+}
+
+########################FOUNDRY################################
+
+resource "azurerm_cognitive_account" "infraguardian" {
+  name                = "p-auea-infraguardian-foundry"
+  location            = module.rg.location["infraguardian"]
+  resource_group_name = module.rg.rg_name["infraguardian"]
+
+  kind     = "AIServices"
+  sku_name = "S0"
+
+  # Required for Foundry Projects / stateful agent capabilities
+  project_management_enabled = true
+
+  # Required for project management and Entra ID-based access
+  custom_subdomain_name = "p-auea-infraguardian-foundry"
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
+########################FOUNDRY PROJECT################################
+
+resource "azurerm_cognitive_account_project" "infraguardian" {
+  name                 = "p-auea-infraguardian-project"
+  cognitive_account_id = azurerm_cognitive_account.infraguardian.id
+  location             = module.rg.location["infraguardian"]
+
+  display_name = "InfraGuardian AI"
+  description  = "InfraGuardian AI agent project"
+
+  identity {
+    type = "SystemAssigned"
+  }
 }

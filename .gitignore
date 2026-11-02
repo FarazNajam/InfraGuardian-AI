@@ -1,26 +1,42 @@
-# Terraform local files
+
+# Terraform working files
 .terraform/
 
-# Terraform state files
+# Terraform state and backups
 *.tfstate
 *.tfstate.*
 
-# Crash logs
+# Terraform crash logs
 crash.log
 
-# Sensitive variable files
+# Terraform JSON variable files
 *.tfvars.json
 
-# Override files
+# Terraform override files
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Terraform lock file (OPTIONAL)
-# Usually keep this in Git for provider version consistency
-# .terraform.lock.hcl
-
-# CLI config files
+# Terraform CLI configuration
 .terraformrc
 terraform.rc
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
