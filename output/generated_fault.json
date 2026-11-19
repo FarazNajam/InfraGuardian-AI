@@ -1,0 +1,31 @@
+{
+    "fault_id": "IG-0BA686C3",
+    "generated_at": "2026-11-19T11:24:19.023184+00:00",
+    "category": "availability",
+    "operation": "simulate_storage_unavailable",
+    "name": "Simulate Storage Unavailable",
+    "description": "Simulate a Storage service becoming unavailable.",
+    "target": {
+        "resource_name": "paueacustomerappsa",
+        "resource_type": "Microsoft.Storage/storageAccounts",
+        "resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Storage/storageAccounts/paueacustomerappsa"
+    },
+    "parameters": {
+        "failure_mode": "service_unavailable",
+        "http_status": 503
+    },
+    "expected_impact": "Storage operations fail with service unavailable errors.",
+    "preconditions": [
+        "Target resource exists in the environment model.",
+        "Target resource has a valid Azure resource ID.",
+        "Fault operation is supported by the operation registry.",
+        "Execution environment is authorised for fault simulation."
+    ],
+    "rollback": {
+        "operation": "restore_storage_availability",
+        "description": "Restore storage availability and verify normal operations."
+    },
+    "requires_approval": true,
+    "execution_mode": "simulation_only",
+    "status": "generated"
+}

@@ -36,18 +36,25 @@ module "nsg" {
 }
 
 module "app" {
-  source   = "../enterprise-azure-terraform-modules/modules/app_service"
+  source = "../enterprise-azure-terraform-modules/modules/app_service"
+
   rg_name  = module.rg.rg_name
   location = module.rg.location
+
+  app_service_plan_name    = "p-auea-infraguardian-asp"
+  app_service_plan_rg_key  = "infraguardian"
+
   app_services = var.app_services
+
   app_services_vnet_integration = var.app_services_vnet_integration
   subnet_id = module.network.subnet_id
 }
 
 module "role_assignments" {
-  source   = "../enterprise-azure-terraform-modules/modules/role_assignments"
-  principal_ids  = module.app.principal_ids
-  role_assignments  = local.role_assignments
+  source = "../enterprise-azure-terraform-modules/modules/role_assignments"
+
+  role_assignments = local.role_assignments
+  principal_ids    = module.app.principal_ids
 }
 
 module "db" {

@@ -36,6 +36,7 @@ app_services = {
     app_service_name      = "p-auea-infraguardian-frontend"
     rg_key                = "infraguardian"
     subnet_key            = "frontend_infraguardian"
+    enable_system_assigned_identity = true
   }
 
   api = {

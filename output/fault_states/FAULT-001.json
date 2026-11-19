@@ -1,0 +1,33 @@
+{
+    "fault_id": "FAULT-001",
+    "captured_at": "2026-11-18T09:29:23.101228+00:00",
+    "resource": {
+        "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-appsvc",
+        "name": "p-auea-customerapp-nsg-appsvc",
+        "location": "australiaeast",
+        "etag": "W/\"0a4394d6-dfac-4eae-8b31-19f425163e46\"",
+        "type": "Microsoft.Network/networkSecurityGroups"
+    },
+    "original_custom_rules": [],
+    "planned_operation": {
+        "operation": "add_security_rule",
+        "rule_name": "ig-fault-001-block-sql",
+        "priority": 100,
+        "direction": "Outbound",
+        "access": "Deny",
+        "protocol": "Tcp",
+        "destination_address_prefix": "10.0.1.4",
+        "destination_port_range": "1433"
+    },
+    "execution_status": "fault_applied",
+    "applied_at": "2026-11-18T09:43:30.449816+00:00",
+    "applied_rule": {
+        "name": "ig-fault-001-block-sql",
+        "priority": 100,
+        "direction": "SecurityRuleDirection.OUTBOUND",
+        "access": "SecurityRuleAccess.DENY",
+        "protocol": "SecurityRuleProtocol.TCP",
+        "destination_address_prefix": "10.0.1.4",
+        "destination_port_range": "1433"
+    }
+}

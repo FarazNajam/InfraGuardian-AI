@@ -1,0 +1,638 @@
+{
+    "generated_at": "2026-11-17T10:55:06.878951+00:00",
+    "discovery_status": "completed",
+    "discovery_results": {
+        "azure_resources": {
+            "subscription_id": "553b9494-e357-471f-8b75-796409610ac1",
+            "resource_group": "p-auea-customerapp-rg",
+            "resource_count": 21,
+            "resources": [
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/serverFarms/p-auea-customerapp-asp",
+                    "name": "p-auea-customerapp-asp",
+                    "type": "Microsoft.Web/serverFarms",
+                    "location": "australiaeast",
+                    "kind": "linux",
+                    "tags": {
+                        "application": "customerapp",
+                        "environment": "production"
+                    }
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-pep",
+                    "name": "p-auea-customerapp-nsg-pep",
+                    "type": "Microsoft.Network/networkSecurityGroups",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.ServiceBus/namespaces/p-auea-customerapp-servicebus",
+                    "name": "p-auea-customerapp-servicebus",
+                    "type": "Microsoft.ServiceBus/namespaces",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-appsvc",
+                    "name": "p-auea-customerapp-nsg-appsvc",
+                    "type": "Microsoft.Network/networkSecurityGroups",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+                    "name": "p-auea-customerapp-sqlserver",
+                    "type": "Microsoft.Sql/servers",
+                    "location": "australiaeast",
+                    "kind": "v12.0",
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+                    "name": "p-auea-customerapp-vnet",
+                    "type": "Microsoft.Network/virtualNetworks",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Storage/storageAccounts/paueacustomerappsa",
+                    "name": "paueacustomerappsa",
+                    "type": "Microsoft.Storage/storageAccounts",
+                    "location": "australiaeast",
+                    "kind": "StorageV2",
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.AppConfiguration/configurationStores/p-auea-customerapp-ac",
+                    "name": "p-auea-customerapp-ac",
+                    "type": "Microsoft.AppConfiguration/configurationStores",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.KeyVault/vaults/p-auea-customerapp-kv",
+                    "name": "p-auea-customerapp-kv",
+                    "type": "Microsoft.KeyVault/vaults",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-frontend",
+                    "name": "p-auea-customerapp-frontend",
+                    "type": "Microsoft.Web/sites",
+                    "location": "australiaeast",
+                    "kind": "app,linux",
+                    "tags": {
+                        "application": "customerapp",
+                        "environment": "production"
+                    }
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+                    "name": "p-auea-customerapp-api",
+                    "type": "Microsoft.Web/sites",
+                    "location": "australiaeast",
+                    "kind": "app,linux",
+                    "tags": {
+                        "application": "customerapp",
+                        "environment": "production"
+                    }
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/master",
+                    "name": "p-auea-customerapp-sqlserver/master",
+                    "type": "Microsoft.Sql/servers/databases",
+                    "location": "australiaeast",
+                    "kind": "v12.0,system,serverless",
+                    "tags": null
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/p-auea-customerapp-db",
+                    "name": "p-auea-customerapp-sqlserver/p-auea-customerapp-db",
+                    "type": "Microsoft.Sql/servers/databases",
+                    "location": "australiaeast",
+                    "kind": "v12.0,user",
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+                    "name": "p-auea-customerapp-db-pep",
+                    "type": "Microsoft.Network/privateEndpoints",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+                    "name": "p-auea-customerapp-api-pep",
+                    "type": "Microsoft.Network/privateEndpoints",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc",
+                    "name": "p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc",
+                    "type": "Microsoft.Network/networkInterfaces",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+                    "name": "privatelink.azurewebsites.net",
+                    "type": "Microsoft.Network/privateDnsZones",
+                    "location": "global",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+                    "name": "privatelink.database.windows.net",
+                    "type": "Microsoft.Network/privateDnsZones",
+                    "location": "global",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/virtualNetworkLinks/p-auea-customerapp-api-vnetl",
+                    "name": "privatelink.azurewebsites.net/p-auea-customerapp-api-vnetl",
+                    "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                    "location": "global",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/virtualNetworkLinks/p-auea-customerapp-sql-vnetl",
+                    "name": "privatelink.database.windows.net/p-auea-customerapp-sql-vnetl",
+                    "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                    "location": "global",
+                    "kind": null,
+                    "tags": {}
+                },
+                {
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673",
+                    "name": "p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673",
+                    "type": "Microsoft.Network/networkInterfaces",
+                    "location": "australiaeast",
+                    "kind": null,
+                    "tags": {}
+                }
+            ]
+        },
+        "app_services": {
+            "resource_group": "p-auea-customerapp-rg",
+            "app_service_count": 2,
+            "app_services": [
+                {
+                    "name": "p-auea-customerapp-api",
+                    "state": "Running",
+                    "location": "Australia East",
+                    "default_host_name": "p-auea-customerapp-api.azurewebsites.net",
+                    "virtual_network_subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+                    "https_only": true,
+                    "identity": {
+                        "type": "SystemAssigned",
+                        "principal_id": "b4478d75-770d-4cec-982e-68b2316066ec"
+                    },
+                    "site_config": {
+                        "always_on": true,
+                        "linux_fx_version": "PYTHON|3.11"
+                    },
+                    "application_setting_names": [
+                        "DB_NAME",
+                        "DB_SERVER",
+                        "SCM_DO_BUILD_DURING_DEPLOYMENT"
+                    ]
+                },
+                {
+                    "name": "p-auea-customerapp-frontend",
+                    "state": "Running",
+                    "location": "Australia East",
+                    "default_host_name": "p-auea-customerapp-frontend.azurewebsites.net",
+                    "virtual_network_subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+                    "https_only": true,
+                    "identity": {
+                        "type": null,
+                        "principal_id": null
+                    },
+                    "site_config": {
+                        "always_on": true,
+                        "linux_fx_version": "PYTHON|3.11"
+                    },
+                    "application_setting_names": [
+                        "API_URL",
+                        "SCM_DO_BUILD_DURING_DEPLOYMENT"
+                    ]
+                }
+            ]
+        },
+        "network": {
+            "resource_group": "p-auea-customerapp-rg",
+            "vnet_count": 1,
+            "virtual_networks": [
+                {
+                    "name": "p-auea-customerapp-vnet",
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+                    "location": "australiaeast",
+                    "address_space": [
+                        "10.0.0.0/16"
+                    ],
+                    "subnets": [
+                        {
+                            "name": "p-auea-customerapp-inbound-snet",
+                            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+                            "address_prefix": "10.0.1.0/24",
+                            "address_prefixes": null,
+                            "network_security_group_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-pep",
+                            "private_endpoint_network_policies": "VirtualNetworkPrivateEndpointNetworkPolicies.DISABLED",
+                            "delegations": []
+                        },
+                        {
+                            "name": "p-auea-customerapp-outbound-snet",
+                            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+                            "address_prefix": "10.0.0.0/24",
+                            "address_prefixes": null,
+                            "network_security_group_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-appsvc",
+                            "private_endpoint_network_policies": "VirtualNetworkPrivateEndpointNetworkPolicies.DISABLED",
+                            "delegations": [
+                                "Microsoft.Web/serverFarms"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "network_security_groups": {
+            "resource_group": "p-auea-customerapp-rg",
+            "nsg_count": 2,
+            "network_security_groups": [
+                {
+                    "name": "p-auea-customerapp-nsg-appsvc",
+                    "location": "australiaeast",
+                    "security_rules": [
+                        {
+                            "name": "AllowVnetInBound",
+                            "priority": 65000,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "VirtualNetwork",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "VirtualNetwork",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowAzureLoadBalancerInBound",
+                            "priority": 65001,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "AzureLoadBalancer",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "DenyAllInBound",
+                            "priority": 65500,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.DENY",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowVnetOutBound",
+                            "priority": 65000,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "VirtualNetwork",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "VirtualNetwork",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowInternetOutBound",
+                            "priority": 65001,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "Internet",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "DenyAllOutBound",
+                            "priority": 65500,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.DENY",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        }
+                    ]
+                },
+                {
+                    "name": "p-auea-customerapp-nsg-pep",
+                    "location": "australiaeast",
+                    "security_rules": [
+                        {
+                            "name": "AllowVnetInBound",
+                            "priority": 65000,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "VirtualNetwork",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "VirtualNetwork",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowAzureLoadBalancerInBound",
+                            "priority": 65001,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "AzureLoadBalancer",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "DenyAllInBound",
+                            "priority": 65500,
+                            "direction": "SecurityRuleDirection.INBOUND",
+                            "access": "SecurityRuleAccess.DENY",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowVnetOutBound",
+                            "priority": 65000,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "VirtualNetwork",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "VirtualNetwork",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "AllowInternetOutBound",
+                            "priority": 65001,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.ALLOW",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "Internet",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        },
+                        {
+                            "name": "DenyAllOutBound",
+                            "priority": 65500,
+                            "direction": "SecurityRuleDirection.OUTBOUND",
+                            "access": "SecurityRuleAccess.DENY",
+                            "protocol": "SecurityRuleProtocol.ASTERISK",
+                            "source_address_prefix": "*",
+                            "source_address_prefixes": [],
+                            "source_port_range": "*",
+                            "source_port_ranges": [],
+                            "destination_address_prefix": "*",
+                            "destination_address_prefixes": [],
+                            "destination_port_range": "*",
+                            "destination_port_ranges": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "private_endpoints": {
+            "resource_group": "p-auea-customerapp-rg",
+            "private_endpoint_count": 2,
+            "private_endpoints": [
+                {
+                    "name": "p-auea-customerapp-api-pep",
+                    "location": "australiaeast",
+                    "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+                    "network_interfaces": [
+                        "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc"
+                    ],
+                    "private_ip_addresses": [
+                        {
+                            "name": "privateEndpointIpConfig.72d15827-0534-46fb-b798-28ebf3adadc9",
+                            "private_ip_address": "10.0.1.5",
+                            "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet"
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "name": "p-auea-customerapp-api-psc",
+                            "target_resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+                            "group_ids": [
+                                "sites"
+                            ],
+                            "connection_status": "Approved",
+                            "connection_description": ""
+                        }
+                    ],
+                    "custom_dns_configs": []
+                },
+                {
+                    "name": "p-auea-customerapp-db-pep",
+                    "location": "australiaeast",
+                    "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+                    "network_interfaces": [
+                        "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673"
+                    ],
+                    "private_ip_addresses": [
+                        {
+                            "name": "privateEndpointIpConfig.b5855f2b-836f-4981-93e6-ce9007425cde",
+                            "private_ip_address": "10.0.1.4",
+                            "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet"
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "name": "p-auea-customerapp-db-psc",
+                            "target_resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+                            "group_ids": [
+                                "sqlServer"
+                            ],
+                            "connection_status": "Approved",
+                            "connection_description": "Auto-approved"
+                        }
+                    ],
+                    "custom_dns_configs": []
+                }
+            ]
+        },
+        "private_dns": {
+            "resource_group": "p-auea-customerapp-rg",
+            "private_dns_zone_count": 2,
+            "private_dns_zones": [
+                {
+                    "name": "privatelink.azurewebsites.net",
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+                    "location": "global",
+                    "number_of_record_sets": 3,
+                    "records": [
+                        {
+                            "name": "@",
+                            "fqdn": "privatelink.azurewebsites.net.",
+                            "ttl": 3600,
+                            "record_type": "SOA",
+                            "a_records": []
+                        },
+                        {
+                            "name": "p-auea-customerapp-api",
+                            "fqdn": "p-auea-customerapp-api.privatelink.azurewebsites.net.",
+                            "ttl": 10,
+                            "record_type": "A",
+                            "a_records": [
+                                {
+                                    "ipv4_address": "10.0.1.5"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "p-auea-customerapp-api.scm",
+                            "fqdn": "p-auea-customerapp-api.scm.privatelink.azurewebsites.net.",
+                            "ttl": 10,
+                            "record_type": "A",
+                            "a_records": [
+                                {
+                                    "ipv4_address": "10.0.1.5"
+                                }
+                            ]
+                        }
+                    ],
+                    "virtual_network_links": [
+                        {
+                            "name": "p-auea-customerapp-api-vnetl",
+                            "virtual_network_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+                            "registration_enabled": false,
+                            "link_state": "Completed"
+                        }
+                    ]
+                },
+                {
+                    "name": "privatelink.database.windows.net",
+                    "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+                    "location": "global",
+                    "number_of_record_sets": 2,
+                    "records": [
+                        {
+                            "name": "@",
+                            "fqdn": "privatelink.database.windows.net.",
+                            "ttl": 3600,
+                            "record_type": "SOA",
+                            "a_records": []
+                        },
+                        {
+                            "name": "p-auea-customerapp-sqlserver",
+                            "fqdn": "p-auea-customerapp-sqlserver.privatelink.database.windows.net.",
+                            "ttl": 10,
+                            "record_type": "A",
+                            "a_records": [
+                                {
+                                    "ipv4_address": "10.0.1.4"
+                                }
+                            ]
+                        }
+                    ],
+                    "virtual_network_links": [
+                        {
+                            "name": "p-auea-customerapp-sql-vnetl",
+                            "virtual_network_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+                            "registration_enabled": false,
+                            "link_state": "Completed"
+                        }
+                    ]
+                }
+            ]
+        },
+        "application_config": {
+            "status": "completed",
+            "applications": [
+                {
+                    "name": "p-auea-customerapp-api",
+                    "resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+                    "settings": {
+                        "DB_SERVER": "p-auea-customerapp-sqlserver.database.windows.net",
+                        "DB_NAME": "p-auea-customerapp-db"
+                    }
+                },
+                {
+                    "name": "p-auea-customerapp-frontend",
+                    "resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-frontend",
+                    "settings": {
+                        "API_URL": "https://p-auea-customerapp-api.azurewebsites.net"
+                    }
+                }
+            ],
+            "errors": []
+        }
+    },
+    "discovery_errors": []
+}

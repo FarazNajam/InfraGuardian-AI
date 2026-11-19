@@ -1,0 +1,601 @@
+{
+    "generated_at": "2026-11-18T08:49:01.040602+00:00",
+    "source_snapshot_generated_at": "2026-11-17T10:55:06.878951+00:00",
+    "source_discovery_status": "completed",
+    "model_status": "completed",
+    "summary": {
+        "node_count": 28,
+        "relationship_count": 27
+    },
+    "nodes": [
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/serverFarms/p-auea-customerapp-asp",
+            "type": "Microsoft.Web/serverFarms",
+            "name": "p-auea-customerapp-asp",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "linux",
+                "tags": {
+                    "application": "customerapp",
+                    "environment": "production"
+                }
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-pep",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "p-auea-customerapp-nsg-pep",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.ServiceBus/namespaces/p-auea-customerapp-servicebus",
+            "type": "Microsoft.ServiceBus/namespaces",
+            "name": "p-auea-customerapp-servicebus",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-appsvc",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "p-auea-customerapp-nsg-appsvc",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+            "type": "Microsoft.Sql/servers",
+            "name": "p-auea-customerapp-sqlserver",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "v12.0",
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "p-auea-customerapp-vnet",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Storage/storageAccounts/paueacustomerappsa",
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "paueacustomerappsa",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "StorageV2",
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.AppConfiguration/configurationStores/p-auea-customerapp-ac",
+            "type": "Microsoft.AppConfiguration/configurationStores",
+            "name": "p-auea-customerapp-ac",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.KeyVault/vaults/p-auea-customerapp-kv",
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "p-auea-customerapp-kv",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-frontend",
+            "type": "Microsoft.Web/sites",
+            "name": "p-auea-customerapp-frontend",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "app,linux",
+                "tags": {
+                    "application": "customerapp",
+                    "environment": "production"
+                },
+                "state": "Running",
+                "default_host_name": "p-auea-customerapp-frontend.azurewebsites.net",
+                "https_only": true,
+                "identity_type": null,
+                "principal_id": null,
+                "application_setting_names": [
+                    "API_URL",
+                    "SCM_DO_BUILD_DURING_DEPLOYMENT"
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "type": "Microsoft.Web/sites",
+            "name": "p-auea-customerapp-api",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "app,linux",
+                "tags": {
+                    "application": "customerapp",
+                    "environment": "production"
+                },
+                "state": "Running",
+                "default_host_name": "p-auea-customerapp-api.azurewebsites.net",
+                "https_only": true,
+                "identity_type": "SystemAssigned",
+                "principal_id": "b4478d75-770d-4cec-982e-68b2316066ec",
+                "application_setting_names": [
+                    "DB_NAME",
+                    "DB_SERVER",
+                    "SCM_DO_BUILD_DURING_DEPLOYMENT"
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/master",
+            "type": "Microsoft.Sql/servers/databases",
+            "name": "p-auea-customerapp-sqlserver/master",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "v12.0,system,serverless",
+                "tags": null
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/p-auea-customerapp-db",
+            "type": "Microsoft.Sql/servers/databases",
+            "name": "p-auea-customerapp-sqlserver/p-auea-customerapp-db",
+            "properties": {
+                "location": "australiaeast",
+                "kind": "v12.0,user",
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+            "type": "Microsoft.Network/privateEndpoints",
+            "name": "p-auea-customerapp-db-pep",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {},
+                "private_ip_addresses": [
+                    {
+                        "name": "privateEndpointIpConfig.b5855f2b-836f-4981-93e6-ce9007425cde",
+                        "private_ip_address": "10.0.1.4",
+                        "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet"
+                    }
+                ],
+                "connections": [
+                    {
+                        "target_resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+                        "connection_status": "Approved"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "type": "Microsoft.Network/privateEndpoints",
+            "name": "p-auea-customerapp-api-pep",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {},
+                "private_ip_addresses": [
+                    {
+                        "name": "privateEndpointIpConfig.72d15827-0534-46fb-b798-28ebf3adadc9",
+                        "private_ip_address": "10.0.1.5",
+                        "subnet_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet"
+                    }
+                ],
+                "connections": [
+                    {
+                        "target_resource_id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+                        "connection_status": "Approved"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc",
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+            "type": "Microsoft.Network/privateDnsZones",
+            "name": "privatelink.azurewebsites.net",
+            "properties": {
+                "location": "global",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+            "type": "Microsoft.Network/privateDnsZones",
+            "name": "privatelink.database.windows.net",
+            "properties": {
+                "location": "global",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/virtualNetworkLinks/p-auea-customerapp-api-vnetl",
+            "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+            "name": "privatelink.azurewebsites.net/p-auea-customerapp-api-vnetl",
+            "properties": {
+                "location": "global",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/virtualNetworkLinks/p-auea-customerapp-sql-vnetl",
+            "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+            "name": "privatelink.database.windows.net/p-auea-customerapp-sql-vnetl",
+            "properties": {
+                "location": "global",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673",
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673",
+            "properties": {
+                "location": "australiaeast",
+                "kind": null,
+                "tags": {}
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "p-auea-customerapp-inbound-snet",
+            "properties": {
+                "address_prefix": "10.0.1.0/24",
+                "delegations": [],
+                "private_endpoint_network_policies": "VirtualNetworkPrivateEndpointNetworkPolicies.DISABLED"
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "p-auea-customerapp-outbound-snet",
+            "properties": {
+                "address_prefix": "10.0.0.0/24",
+                "delegations": [
+                    "Microsoft.Web/serverFarms"
+                ],
+                "private_endpoint_network_policies": "VirtualNetworkPrivateEndpointNetworkPolicies.DISABLED"
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/@",
+            "type": "DNS/SOA",
+            "name": "privatelink.azurewebsites.net.",
+            "properties": {
+                "zone": "privatelink.azurewebsites.net",
+                "ttl": 3600,
+                "record_type": "SOA",
+                "a_records": []
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api",
+            "type": "DNS/A",
+            "name": "p-auea-customerapp-api.privatelink.azurewebsites.net.",
+            "properties": {
+                "zone": "privatelink.azurewebsites.net",
+                "ttl": 10,
+                "record_type": "A",
+                "a_records": [
+                    {
+                        "ipv4_address": "10.0.1.5"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api.scm",
+            "type": "DNS/A",
+            "name": "p-auea-customerapp-api.scm.privatelink.azurewebsites.net.",
+            "properties": {
+                "zone": "privatelink.azurewebsites.net",
+                "ttl": 10,
+                "record_type": "A",
+                "a_records": [
+                    {
+                        "ipv4_address": "10.0.1.5"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/recordsets/@",
+            "type": "DNS/SOA",
+            "name": "privatelink.database.windows.net.",
+            "properties": {
+                "zone": "privatelink.database.windows.net",
+                "ttl": 3600,
+                "record_type": "SOA",
+                "a_records": []
+            }
+        },
+        {
+            "id": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/recordsets/p-auea-customerapp-sqlserver",
+            "type": "DNS/A",
+            "name": "p-auea-customerapp-sqlserver.privatelink.database.windows.net.",
+            "properties": {
+                "zone": "privatelink.database.windows.net",
+                "ttl": 10,
+                "record_type": "A",
+                "a_records": [
+                    {
+                        "ipv4_address": "10.0.1.4"
+                    }
+                ]
+            }
+        }
+    ],
+    "relationships": [
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+            "relationship": "integrates_with_subnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "App Service virtual_network_subnet_id matches the subnet resource ID."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-frontend",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+            "relationship": "integrates_with_subnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "App Service virtual_network_subnet_id matches the subnet resource ID."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+            "relationship": "connects_to_sql_server",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "setting_name": "DB_SERVER",
+                "configured_value": "p-auea-customerapp-sqlserver.database.windows.net",
+                "matched_hostname": "p-auea-customerapp-sqlserver.database.windows.net"
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/p-auea-customerapp-db",
+            "relationship": "uses_database",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "setting_name": "DB_NAME",
+                "configured_value": "p-auea-customerapp-db"
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-frontend",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "relationship": "calls_api",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "setting_name": "API_URL",
+                "configured_value": "https://p-auea-customerapp-api.azurewebsites.net",
+                "matched_hostname": "p-auea-customerapp-api.azurewebsites.net"
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+            "relationship": "belongs_to_vnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Subnet is listed under this VNet."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-pep",
+            "relationship": "associated_with_nsg",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Subnet network_security_group_id references this NSG."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+            "relationship": "belongs_to_vnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Subnet is listed under this VNet."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-outbound-snet",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkSecurityGroups/p-auea-customerapp-nsg-appsvc",
+            "relationship": "associated_with_nsg",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Subnet network_security_group_id references this NSG."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+            "relationship": "deployed_in_subnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Private endpoint subnet_id."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Web/sites/p-auea-customerapp-api",
+            "relationship": "private_endpoint_targets_resource",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "connection_name": "p-auea-customerapp-api-psc",
+                "group_ids": [
+                    "sites"
+                ],
+                "connection_status": "Approved"
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-api-pep.nic.b8bb49ca-48b1-420b-9db6-ee96920db7fc",
+            "relationship": "uses_network_interface",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "NIC ID listed by private endpoint discovery."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet/subnets/p-auea-customerapp-inbound-snet",
+            "relationship": "deployed_in_subnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Private endpoint subnet_id."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+            "relationship": "private_endpoint_targets_resource",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "connection_name": "p-auea-customerapp-db-psc",
+                "group_ids": [
+                    "sqlServer"
+                ],
+                "connection_status": "Approved"
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/networkInterfaces/p-auea-customerapp-db-pep.nic.100d0ad4-40e0-45c2-8488-0abd2a57a673",
+            "relationship": "uses_network_interface",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "NIC ID listed by private endpoint discovery."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+            "relationship": "linked_to_vnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "link_name": "p-auea-customerapp-api-vnetl",
+                "link_state": "Completed",
+                "registration_enabled": false
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/@",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+            "relationship": "belongs_to_dns_zone",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Record was discovered inside this DNS zone."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+            "relationship": "belongs_to_dns_zone",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Record was discovered inside this DNS zone."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "relationship": "resolves_to_private_endpoint_ip",
+            "evidence_type": "inferred",
+            "evidence": {
+                "dns_ipv4_address": "10.0.1.5",
+                "private_endpoint_ip_match": true
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api.scm",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net",
+            "relationship": "belongs_to_dns_zone",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Record was discovered inside this DNS zone."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.azurewebsites.net/recordsets/p-auea-customerapp-api.scm",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-api-pep",
+            "relationship": "resolves_to_private_endpoint_ip",
+            "evidence_type": "inferred",
+            "evidence": {
+                "dns_ipv4_address": "10.0.1.5",
+                "private_endpoint_ip_match": true
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/virtualNetworks/p-auea-customerapp-vnet",
+            "relationship": "linked_to_vnet",
+            "evidence_type": "confirmed_configuration",
+            "evidence": {
+                "link_name": "p-auea-customerapp-sql-vnetl",
+                "link_state": "Completed",
+                "registration_enabled": false
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/recordsets/@",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+            "relationship": "belongs_to_dns_zone",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Record was discovered inside this DNS zone."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/recordsets/p-auea-customerapp-sqlserver",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net",
+            "relationship": "belongs_to_dns_zone",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Record was discovered inside this DNS zone."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net/recordsets/p-auea-customerapp-sqlserver",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Network/privateEndpoints/p-auea-customerapp-db-pep",
+            "relationship": "resolves_to_private_endpoint_ip",
+            "evidence_type": "inferred",
+            "evidence": {
+                "dns_ipv4_address": "10.0.1.4",
+                "private_endpoint_ip_match": true
+            }
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/master",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+            "relationship": "hosted_on_sql_server",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Parent SQL server ID derived from the database Azure resource ID."
+        },
+        {
+            "source": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver/databases/p-auea-customerapp-db",
+            "target": "/subscriptions/553b9494-e357-471f-8b75-796409610ac1/resourceGroups/p-auea-customerapp-rg/providers/Microsoft.Sql/servers/p-auea-customerapp-sqlserver",
+            "relationship": "hosted_on_sql_server",
+            "evidence_type": "confirmed_configuration",
+            "evidence": "Parent SQL server ID derived from the database Azure resource ID."
+        }
+    ],
+    "limitations": [
+        "Application dependencies are derived from allowlisted App Service configuration values. They establish configured dependencies, not successful runtime communication.",
+        "Runtime connectivity tests are not yet stored in the environment snapshot.",
+        "A DNS-to-private-endpoint relationship based on matching IP addresses establishes an IP match, not proof of runtime DNS resolution."
+    ]
+}
